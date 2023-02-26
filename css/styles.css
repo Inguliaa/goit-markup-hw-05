@@ -125,7 +125,7 @@ img {
 .button-order:hover,
 .button-order:focus {
   background-color: var(--pressed-state);
-  border: none;
+  border: 1px solid var(--pressed-state);
 }
 .menu-nav {
   font-weight: 500;
