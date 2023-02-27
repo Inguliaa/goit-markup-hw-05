@@ -147,6 +147,7 @@ img {
   position: relative;
   accent-color: var(--pressed-state);
   max-width: 66px;
+  transition: color var(--timing-function);
 }
 .current-link {
   color: var(--pressed-state);
@@ -170,7 +171,7 @@ img {
   padding-top: 24px;
   padding-bottom: 24px;
   display: block;
-  transition: var(--timing-function);
+  transition: color var(--timing-function);
 }
 
 .contacts-add:hover,
@@ -321,6 +322,9 @@ img {
 .socials-link {
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--primary-brand);
   border-radius: 50%;
   transition: background-color var(--timing-function);
@@ -332,8 +336,6 @@ img {
 .socials-icon {
   width: 16px;
   height: 16px;
-  margin-top: 12px;
-  margin-left: 12px;
   fill: var(--light-color);
 }
 .customers {
@@ -404,6 +406,9 @@ img {
 .media-link {
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--title-text-color);
   border-radius: 50%;
   transition: background-color var(--timing-function);
@@ -415,8 +420,6 @@ img {
 .footer-icon {
   width: 24px;
   height: 24px;
-  margin-top: 8px;
-  margin-left: 8px;
   fill: var(--light-color);
 }
 .footer-link {
@@ -426,10 +429,6 @@ img {
 .footer-list {
   display: flex;
   gap: 120px;
-}
-.social-media {
-  max-width: 280px;
-  height: 80px;
 }
 .footer-text {
   font-family: "Roboto";
@@ -459,12 +458,14 @@ img {
   margin-right: auto;
   justify-content: center;
   padding: 12px 24px;
-  transition: var(--timing-function);
+  transition: color var(--timing-function),
+    background-color var(--timing-function), border-color var(--timing-function),
+    box-shadow var(--timing-function);
 }
 .filter-btn:hover {
   color: var(--body-color);
   background-color: var(--pressed-state);
-  border: 1px solid var(--pressed-state);
+  border-color: 1px solid var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -584,5 +585,4 @@ img {
   width: 8px;
   height: 8px;
   fill: currentColor;
-  transition: var(--timing-function);
 }
