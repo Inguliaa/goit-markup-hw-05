@@ -119,8 +119,7 @@ img {
   border: 1px solid var(--primary-brand);
   padding: 16px 32px;
   transition: color var(--timing-function),
-    background-color var(--timing-function),
-    box-shadow var(--timing-function);
+    background-color var(--timing-function), box-shadow var(--timing-function);
 }
 .button-order:hover,
 .button-order:focus {
@@ -137,6 +136,7 @@ img {
   margin-right: auto;
   padding-top: 24px;
   padding-bottom: 24px;
+  transition: var(--timing-function);
 }
 .menu-nav:hover,
 .menu-nav:focus,
@@ -170,6 +170,7 @@ img {
   padding-top: 24px;
   padding-bottom: 24px;
   display: block;
+  transition: var(--timing-function);
 }
 
 .contacts-add:hover,
@@ -270,7 +271,7 @@ img {
   position: relative;
   overflow: hidden;
 }
-.flex-element:hover .overlay {
+.apps-card:hover .overlay {
   opacity: 1;
   transform: translateY(0);
 }
@@ -281,9 +282,9 @@ img {
   width: 100%;
   height: 100%;
   background-color: var(--primary-brand);
-  opacity: 0;
   transform: translateY(100%);
-  transition: var(--timing-function);
+  transition: transform var(--timing-function);
+  padding: 40px 32px;
 }
 .overlay-description {
   font-weight: 400;
@@ -291,7 +292,6 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--light-color);
-  padding: 40px 32px;
 }
 .team-card {
   font-weight: 500;
@@ -323,7 +323,7 @@ img {
   height: 100%;
   background-color: var(--primary-brand);
   border-radius: 50%;
-  transition: var(--timing-function);
+  transition: background-color var(--timing-function);
 }
 .socials-link:hover,
 .socials-link:focus {
@@ -357,7 +357,7 @@ img {
   color: var(--customers-color);
   border: 1px solid var(--customers-color);
   border-radius: 4px;
-  transition: var(--timing-function);
+  transition: color var(--timing-function) border-color var(--timing-function);
 }
 .customers-link:hover,
 .customers-link:focus {
@@ -406,7 +406,7 @@ img {
   height: 100%;
   background-color: var(--title-text-color);
   border-radius: 50%;
-  transition: var(--timing-function);
+  transition: background-color var(--timing-function);
 }
 .media-link:hover,
 .media-link:focus {
@@ -553,9 +553,8 @@ img {
   background-color: var(--modal-color);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-    transition: transform var(--timing-function),
-    opacity var(--timing-function), visibility var(--timing-function),
-    backgrund-color var(--timing-function);
+  transition: transform var(--timing-function), opacity var(--timing-function),
+    visibility var(--timing-function), backgrund-color var(--timing-function);
 }
 .modal-close {
   position: absolute;
@@ -573,6 +572,9 @@ img {
   transition: background-color var(--timing-function),
     color var(--timing-function);
 }
+.modal-close:hover {
+  background-color: var(--pressed-state);
+}
 .backdrop.is-hidden .modal {
   transform: scale(0);
 }
@@ -581,4 +583,7 @@ img {
   height: 8px;
   fill: var(--modal-close);
   transition: var(--timing-function);
+}
+.modal-icon:hover {
+  fill: var(--body-color);
 }
